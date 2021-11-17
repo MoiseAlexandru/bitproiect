@@ -1,0 +1,50 @@
+
+
+<div *ngIf = "data">
+  <table>
+
+    <tr>
+      <td class = "centru"> Status: </td>
+      <td class = "centru">
+        <div id = "circle_green" *ngIf = "data.status === 'online'"> </div>
+        <div id = "circle_gray" *ngIf = "data.status === 'offline'"> </div>
+        {{data.status}}
+      </td>
+    </tr>
+    <tr>
+      <td class = "centru"> Number of logins: </td>
+      <td class = "centru"> {{data.loginsNumber}} </td>
+    </tr>
+    <tr>
+      <td class = "centru"> First login </td>
+      <td class = "centru"> {{data.firstLogin}} </td>
+    </tr>
+    <tr>
+      <td class = "centru"> Last login </td>
+      <td class = "centru"> {{data.lastLogin}} </td>
+    </tr>
+    <tr>
+      <td class = "centru"> Time spent online </td>
+      <td class = "centru"> {{data.timeSpent}} </td>
+    </tr>
+    <tr>
+      <td class = "centru"> Average session time </td>
+      <td class = "centru"> {{data.averageLoginTime}} </td>
+    </tr>
+  </table>
+
+  <div class = "centru">
+    <button mat-raised-button class = "backbutton" color = "primary" routerLink = "/table"> Back </button>
+  </div>
+
+  <div class = "chart" *ngIf = "chartData !== undefined">
+    <google-chart
+      [type]="chartData.type"
+      [data]="chartData.data"
+      [columns]="chartData.columnNames"
+      [options]="chartData.options"
+      [width]="chartData.width"
+      [height]="chartData.height">
+    </google-chart>
+  </div>
+</div>

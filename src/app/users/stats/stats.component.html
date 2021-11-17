@@ -1,0 +1,49 @@
+<div class = "clasa">
+<mat-accordion multi = "true">
+
+  <mat-expansion-panel *ngFor = "let user of userList">
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel *ngFor = "let user of users">
+
+    <mat-expansion-panel-header>
+      <p> {{user.username}}</p>
+    </mat-expansion-panel-header>
+
+    <p> Status: {{user.status}} </p>
+    <p> First login on: {{user.firstLogin}} </p>
+    <p> Last login on: {{user.lastLogin}} </p>
+    <p> Total time online: {{user.timeSpent}} </p>
+    <p> Number of logins: {{user.loginsNumber}} </p>
+    <p> Average login time: {{user.averageLoginTime}}</p>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
+</div>
+
+<div class = "chart" *ngIf = "chartData !== undefined">
+  <google-chart
+      [title]="chartData.title"
+      [type]="chartData.type"
+      [data]="chartData.data"
+      [columns]="chartData.chartColumns"
+      [width]="chartData.width"
+      [height]="chartData.height"
+  >
+  </google-chart>
+</div>
+
+<div class = "chart" *ngIf = "secondChartData !== undefined">
+  <google-chart
+      [title]="secondChartData.title"
+      [type]="secondChartData.type"
+      [data]="secondChartData.data"
+      [columns]="secondChartData.chartColumns"
+      [width]="secondChartData.width"
+      [height]="secondChartData.height"
+      [optinons]="secondChartData.options"
+  >
+  </google-chart>
+</div>

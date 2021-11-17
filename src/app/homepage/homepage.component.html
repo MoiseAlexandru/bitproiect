@@ -1,0 +1,10 @@
+<div class = "center">
+  <div *ngIf = "!loggedinNumber">
+    <p class = "text"> No users logged in </p>
+  </div>
+  <div *ngIf = "loggedinNumber > 0">
+    <p class = "number"> {{loggedinNumber}} </p>
+    <p class = "text" *ngIf = "loggedinNumber > 1"> Users logged in </p>
+    <p class = "text" *ngIf = "loggedinNumber === 1"> User logged in </p>
+  </div>
+</div>

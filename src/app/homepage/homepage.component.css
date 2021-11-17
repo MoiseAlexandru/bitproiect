@@ -1,0 +1,13 @@
+.center {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.number {
+  font-size: 300px;
+  line-height: 30px;
+}
+
+.text {
+  font-size: 50px;
+}

@@ -1,0 +1,24 @@
+<mat-card>
+
+  <mat-form-field>
+    <input matInput placeholder = "username" [(ngModel)] = "enteredUsername" #username>
+    <mat-error *ngIf = "username.length === 0"> Please enter a valid username! </mat-error>
+  </mat-form-field>
+
+  <button class = "loginButton" mat-raised-button color = "accent" (click) = "onLogin()"> Log in! </button>
+  <button class = "logoutButton" mat-raised-button color = "accent" (click) = "onLogout()"> Log out! </button>
+  <br>
+  <br>
+  <button class = "deleteButton" mat-raised-button color = "accent" (click) = "onDelete()"> Delete </button>
+  <button class = "logoutButton" mat-raised-button color = "accent" (click) = "onDeleteAll()"> Delete all! </button>
+</mat-card>
+<div>
+  <p class = "message" *ngIf = "loggedin"> User has been logged in! </p>
+  <p class = "error" *ngIf = "loggedinError"> User is already logged in! </p>
+  <p class = "message" *ngIf = "loggedout"> User has been logged out! </p>
+  <p class = "error" *ngIf = "loggedoutError && !loggedoutError2"> User is already logged out! </p>
+  <p class = "error" *ngIf = "loggedoutError2"> User does not exist </p>
+  <p class = "message" *ngIf = "deleted"> User has been deleted! </p>
+  <p class = "error" *ngIf = "deletedError"> User does not exist! </p>
+  <p class = "message" *ngIf = "deletedall"> All users deleted! </p>
+</div>

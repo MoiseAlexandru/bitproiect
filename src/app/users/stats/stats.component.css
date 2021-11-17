@@ -1,0 +1,17 @@
+.centru {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.clasa {
+  width: 50%;
+  margin: auto;
+}
+
+.chart {
+  margin-top: 50px;
+  text-align: center;
+  width: 60%;
+}

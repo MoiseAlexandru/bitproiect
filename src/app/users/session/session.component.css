@@ -1,0 +1,49 @@
+
+mat-card {
+  width: 80%;
+  max-width: 20rem;
+  margin: auto;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.logoutButton {
+  float: right;
+}
+
+.message {
+  color: green;
+  text-align: center;
+  animation: show 2.7s ease;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  animation: show 2.7s ease;
+}
+
+@keyframes show{
+  0%{
+    content: "";
+    opacity: 0;
+  }
+  25%{
+    content: "";
+    opacity: 0.75;
+  }
+  50% {
+    content: "";
+    opacity: 1;
+  }
+  75%{
+    content: "";
+    opacity: 0.75;
+  }
+  100%{
+    content: none;
+    opacity: 0;
+  }
+}
